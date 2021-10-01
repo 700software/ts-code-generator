@@ -1,0 +1,1 @@
+xcopy V:\ts-code-generator E:\OneDrive\TsTypeBuilder-Backup /EXCLUDE:backup-exclude-list.txt /S /Y

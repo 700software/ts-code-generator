@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for dist\definitions\file\FileDefinition.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">dist/definitions/file/</a> FileDefinition.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">77.46% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>55/71</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">64.71% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>11/17</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">75% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>12/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">76.47% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>52/68</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">2 branches</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">37×</span>
+<span class="cline-any cline-yes">37×</span>
+<span class="cline-any cline-yes">37×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+var __extends = (this &amp;&amp; this.__extends)/* istanbul ignore next */ || function (d, b) {
+    for (var p in b) <span class="skip-if-branch" title="else path not taken" >E</span>if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? <span class="branch-0 cbranch-skip" title="branch not covered" >Object.create(b) </span>: (__.prototype = b.prototype, new __());
+};
+var path = require("path"); // todo: remove dependency on path
+var factories_1 = require("./../../factories");
+var utils_1 = require("./../../utils");
+var WriteFlags_1 = require("./../../WriteFlags");
+var writeDefinition_1 = require("./../../writeDefinition");
+var base_1 = require("./../base");
+var FileDefinition = (function (_super) {
+    __extends(FileDefinition, _super);
+    function FileDefinition() {
+        _super.apply(this, arguments);
+        this.imports = [];
+        this.reExports = [];
+    }
+    FileDefinition.prototype.addImport = function (structure) {
+        utils_1.validateImportStructure(structure);
+        var def = new factories_1.StructureFactory().getImport(structure);
+        this.imports.push(def);
+        return def;
+    };
+    FileDefinition.prototype.addReExport = function (structure) {
+        var def = new factories_1.StructureFactory().getReExport(structure);
+        this.reExports.push(def);
+        return def;
+    };
+    FileDefinition.prototype.getModuleSpecifierToFile = function (file) {
+        if (utils_1.StringUtils.isNullOrWhiteSpace(file.fileName) || utils_1.StringUtils.isNullOrWhiteSpace(this.fileName)) {
+            throw new Error("The files being compared must both have a fileName.");
+        }
+        var fileNameFrom = utils_1.FileUtils.standardizeSlashes(this.fileName);
+        var fileNameTo = utils_1.FileUtils.standardizeSlashes(file.fileName);
+        var relativePath = path.relative(path.dirname(fileNameFrom), path.dirname(fileNameTo));
+        var fullPath = path.join(relativePath, path.basename(fileNameTo));
+        var fullPathWithoutExtension = fullPath.replace(/\.[^/.]+$/, "");
+        return "./" + utils_1.FileUtils.standardizeSlashes(fullPathWithoutExtension);
+    };
+    FileDefinition.prototype.getImport = function (searchFunction) {
+        return utils_1.DefinitionUtils.getDefinitionFromListByFunc(this.imports, searchFunction);
+    };
+    FileDefinition.prototype.getReExport = function (searchFunction) {
+        return utils_1.DefinitionUtils.getDefinitionFromListByFunc(this.reExports, searchFunction);
+    };
+    FileDefinition.prototype.getExports = function () {
+        var exports = base_1.ModuledDefinition.prototype.getExports.call(this);
+        this.reExports.forEach(function (reExport) {
+            reExport.getExports().forEach(<span class="fstat-no" title="function not covered" >function (def) {</span>
+<span class="cstat-no" title="statement not covered" >                if (exports.indexOf(def) === -1) {</span>
+<span class="cstat-no" title="statement not covered" >                    exports.push(def);</span>
+                }
+            });
+        });
+        return exports;
+    };
+    FileDefinition.prototype.write = function (writeOptions) {
+        var writer = factories_1.MainFactory.createWriter(writeOptions);
+        var fileWriter = factories_1.MainFactory.createWriteFactory(writer).getFileWriter();
+        fileWriter.write(this, WriteFlags_1.WriteFlags.Default);
+        return writer.toString();
+    };
+    FileDefinition.prototype.writeExportsAsDefinitionFile = <span class="fstat-no" title="function not covered" >function (options) {</span>
+<span class="cstat-no" title="statement not covered" >        console.warn("writeExportsAsDefinitionFile(...) is not supported. It has not been tested.");</span>
+<span class="cstat-no" title="statement not covered" >        var writer = factories_1.MainFactory.createWriter(options.writeOptions);</span>
+<span class="cstat-no" title="statement not covered" >        if (options &amp;&amp; options.imports) {</span>
+<span class="cstat-no" title="statement not covered" >            var structureFactory_1 = new factories_1.StructureFactory();</span>
+<span class="cstat-no" title="statement not covered" >            var importWriter_1 = factories_1.MainFactory.createWriteFactory(writer).getImportWriter();</span>
+<span class="cstat-no" title="statement not covered" >            options.imports.forEach(<span class="fstat-no" title="function not covered" >function (importStructure) {</span></span>
+<span class="cstat-no" title="statement not covered" >                var importDef = structureFactory_1.getImport(importStructure);</span>
+<span class="cstat-no" title="statement not covered" >                importWriter_1.write(importDef);</span>
+            });
+<span class="cstat-no" title="statement not covered" >            writer.newLine();</span>
+        }
+<span class="cstat-no" title="statement not covered" >        var writeFlags = WriteFlags_1.WriteFlags.HideFunctionBodies | WriteFlags_1.WriteFlags.HideExpressions | WriteFlags_1.WriteFlags.HidePrivateMembers | WriteFlags_1.WriteFlags.HideProtectedMembers |</span>
+            WriteFlags_1.WriteFlags.HideFunctionImplementations;
+<span class="cstat-no" title="statement not covered" >        this.getExports().forEach(<span class="fstat-no" title="function not covered" >function (exportDef) {</span></span>
+<span class="cstat-no" title="statement not covered" >            writeDefinition_1.writeDefinition(exportDef, writer, writeFlags);</span>
+<span class="cstat-no" title="statement not covered" >            writer.newLine();</span>
+        });
+<span class="cstat-no" title="statement not covered" >        return writer.toString();</span>
+    };
+    return FileDefinition;
+}(base_1.BaseDefinition));
+exports.FileDefinition = FileDefinition;
+utils_1.applyMixins(FileDefinition, base_1.BaseDefinition, [base_1.ModuledDefinition]);
+&nbsp;
+//# sourceMappingURL=FileDefinition.js.map
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Dec 17 2016 16:49:10 GMT-0500 (Eastern Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for dist\definitions\base\ModuledDefinition.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">dist/definitions/base/</a> ModuledDefinition.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">99.11% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>111/112</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">96% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>24/25</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>32/32</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">99.03% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>102/103</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">85×</span>
+<span class="cline-any cline-yes">85×</span>
+<span class="cline-any cline-yes">85×</span>
+<span class="cline-any cline-yes">85×</span>
+<span class="cline-any cline-yes">85×</span>
+<span class="cline-any cline-yes">85×</span>
+<span class="cline-any cline-yes">85×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">71×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+var factories_1 = require("./../../factories");
+var utils_1 = require("./../../utils");
+var ModuledDefinition = (function () {
+    function ModuledDefinition() {
+        this.namespaces = [];
+        this.classes = [];
+        this.interfaces = [];
+        this.enums = [];
+        this.functions = [];
+        this.variables = [];
+        this.typeAliases = [];
+    }
+    // need to pass these in after initializing in order to prevent circular dependencies
+    ModuledDefinition.initialize = function (instanceContainer) {
+        this.instanceContainer = instanceContainer;
+    };
+    ModuledDefinition.prototype.addClass = function (structure) {
+        var def = new factories_1.StructureFactory().getClass(structure);
+        def.order = utils_1.DefinitionUtils.getNextOrderOfModule(this);
+        this.classes.push(def);
+        return def;
+    };
+    ModuledDefinition.prototype.addEnum = function (structure) {
+        var def = new factories_1.StructureFactory().getEnum(structure);
+        def.order = utils_1.DefinitionUtils.getNextOrderOfModule(this);
+        this.enums.push(def);
+        return def;
+    };
+    ModuledDefinition.prototype.addFunction = function (structure) {
+        var def = new factories_1.StructureFactory().getFunction(structure);
+        def.order = utils_1.DefinitionUtils.getNextOrderOfModule(this);
+        this.functions.push(def);
+        return def;
+    };
+    ModuledDefinition.prototype.addInterface = function (structure) {
+        var def = new factories_1.StructureFactory().getInterface(structure);
+        def.order = utils_1.DefinitionUtils.getNextOrderOfModule(this);
+        this.interfaces.push(def);
+        return def;
+    };
+    ModuledDefinition.prototype.addNamespace = function (structure) {
+        var def = new factories_1.StructureFactory().getNamespace(structure);
+        def.order = utils_1.DefinitionUtils.getNextOrderOfModule(this);
+        this.namespaces.push(def);
+        return def;
+    };
+    ModuledDefinition.prototype.addTypeAlias = function (structure) {
+        var def = new factories_1.StructureFactory().getTypeAlias(structure);
+        def.order = utils_1.DefinitionUtils.getNextOrderOfModule(this);
+        this.typeAliases.push(def);
+        return def;
+    };
+    ModuledDefinition.prototype.addVariable = function (structure) {
+        var def = new factories_1.StructureFactory().getVariable(structure);
+        def.order = utils_1.DefinitionUtils.getNextOrderOfModule(this);
+        this.variables.push(def);
+        return def;
+    };
+    ModuledDefinition.prototype.getClass = function (nameOrSearchFunction) {
+        return utils_1.DefinitionUtils.getDefinitionFromListByNameOrFunc(this.classes, nameOrSearchFunction);
+    };
+    ModuledDefinition.prototype.getEnum = function (nameOrSearchFunction) {
+        return utils_1.DefinitionUtils.getDefinitionFromListByNameOrFunc(this.enums, nameOrSearchFunction);
+    };
+    ModuledDefinition.prototype.getFunction = function (nameOrSearchFunction) {
+        return utils_1.DefinitionUtils.getDefinitionFromListByNameOrFunc(this.functions, nameOrSearchFunction);
+    };
+    ModuledDefinition.prototype.getInterface = function (nameOrSearchFunction) {
+        return utils_1.DefinitionUtils.getDefinitionFromListByNameOrFunc(this.interfaces, nameOrSearchFunction);
+    };
+    ModuledDefinition.prototype.getNamespace = function (nameOrSearchFunction) {
+        return utils_1.DefinitionUtils.getDefinitionFromListByNameOrFunc(this.namespaces, nameOrSearchFunction);
+    };
+    ModuledDefinition.prototype.getTypeAlias = function (nameOrSearchFunction) {
+        return utils_1.DefinitionUtils.getDefinitionFromListByNameOrFunc(this.typeAliases, nameOrSearchFunction);
+    };
+    ModuledDefinition.prototype.getVariable = function (nameOrSearchFunction) {
+        return utils_1.DefinitionUtils.getDefinitionFromListByNameOrFunc(this.variables, nameOrSearchFunction);
+    };
+    ModuledDefinition.prototype.directlyContains = function (def) {
+        if (def instanceof ModuledDefinition.instanceContainer.classType) {
+            return this.getClass(function (d) { return d === def; }) != null;
+        }
+        else if (def instanceof ModuledDefinition.instanceContainer.functionType) {
+            return this.getFunction(function (d) { return d === def; }) != null;
+        }
+        else if (def instanceof ModuledDefinition.instanceContainer.interfaceType) {
+            return this.getInterface(function (d) { return d === def; }) != null;
+        }
+        else if (def instanceof ModuledDefinition.instanceContainer.namespaceType) {
+            return this.getNamespace(function (d) { return d === def; }) != null;
+        }
+        else if (def instanceof ModuledDefinition.instanceContainer.enumType) {
+            return this.getEnum(function (d) { return d === def; }) != null;
+        }
+        else if (def instanceof ModuledDefinition.instanceContainer.typeAliasType) {
+            return this.getTypeAlias(function (d) { return d === def; }) != null;
+        }
+        else <span class="missing-if-branch" title="else path not taken" >E</span>if (def instanceof ModuledDefinition.instanceContainer.variableType) {
+            return this.getVariable(function (d) { return d === def; }) != null;
+        }
+        else {
+<span class="cstat-no" title="statement not covered" >            return false;</span>
+        }
+    };
+    ModuledDefinition.prototype.getNamespacesToDefinition = function (searchDef) {
+        var foundInModule = this.directlyContains(searchDef);
+        if (foundInModule) {
+            return [];
+        }
+        else {
+            for (var i = 0; i &lt; this.namespaces.length; i++) {
+                var path = this.namespaces[i].getNamespacesToDefinition(searchDef);
+                if (path != null) {
+                    return [this.namespaces[i]].concat(path);
+                }
+            }
+            return null;
+        }
+    };
+    ModuledDefinition.prototype.getExports = function () {
+        return this.getMembers().filter(function (d) { return d.isNamedExportOfFile || d.isExported &amp;&amp; !d.isDefaultExportOfFile; });
+    };
+    ModuledDefinition.prototype.getMembers = function () {
+        return this.namespaces.concat(this.classes, this.interfaces, this.enums, this.functions, this.variables, this.typeAliases);
+    };
+    ModuledDefinition.prototype.setOrderOfMember = function (order, member) {
+        var members = this.getMembers();
+        order = Math.max(order, 0);
+        if (!members.some(function (m) { return m === member; })) {
+            throw new Error("The member '" + member.name + "' does not exist in this module.");
+        }
+        else {
+            members.forEach(function (m) {
+                if (m.order &gt;= order) {
+                    m.order++;
+                }
+            });
+            member.order = order;
+        }
+        return this;
+    };
+    return ModuledDefinition;
+}());
+exports.ModuledDefinition = ModuledDefinition;
+&nbsp;
+//# sourceMappingURL=ModuledDefinition.js.map
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Dec 17 2016 16:49:10 GMT-0500 (Eastern Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

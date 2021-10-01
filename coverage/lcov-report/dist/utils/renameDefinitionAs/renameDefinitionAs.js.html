@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for dist\utils\renameDefinitionAs\renameDefinitionAs.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">dist/utils/renameDefinitionAs/</a> renameDefinitionAs.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">28.57% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>10/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">30.3% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>10/33</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+var RenameInfo_1 = require("./RenameInfo");
+var getRenameInfosFromVariablesInModule_1 = require("./getRenameInfosFromVariablesInModule");
+var getRenameInfosFromDefaultExport_1 = require("./getRenameInfosFromDefaultExport");
+var renameInFile_1 = require("./renameInFile");
+var renameInGlobalForExternalModules_1 = require("./renameInGlobalForExternalModules");
+var renameInMainFileNamespaces_1 = require("./renameInMainFileNamespaces");
+<span class="fstat-no" title="function not covered" >function renameDefinitionAs(opts) {</span>
+<span class="cstat-no" title="statement not covered" >    var globalDef = opts.globalDef, definition = opts.definition, newName = opts.newName;</span>
+<span class="cstat-no" title="statement not covered" >    var fileAndNamespaces = globalDef.getFileAndNamespacesToDefinition(definition);</span>
+<span class="cstat-no" title="statement not covered" >    if (fileAndNamespaces == null) {</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    var mainFile = fileAndNamespaces.file, namespaces = fileAndNamespaces.namespaces;</span>
+<span class="cstat-no" title="statement not covered" >    var renameInfo = RenameInfo_1.RenameInfo.createFromNamespaces({ nameFrom: definition.name, nameTo: newName, namespaceNames: namespaces.map(<span class="fstat-no" title="function not covered" >function (n) {</span> <span class="cstat-no" title="statement not covered" >return n.name; </span>}) });</span>
+<span class="cstat-no" title="statement not covered" >    renameInMainFileNamespaces_1.renameInMainFileNamespaces(renameInfo, namespaces);</span>
+<span class="cstat-no" title="statement not covered" >    if (mainFile.imports.length === 0 &amp;&amp; mainFile.getExports().length === 0 &amp;&amp; mainFile.defaultExportExpression == null) {</span>
+<span class="cstat-no" title="statement not covered" >        renameForInternalModules();</span>
+    }
+    else {
+<span class="cstat-no" title="statement not covered" >        renameForExternalModules();</span>
+    }
+<span class="cstat-no" title="statement not covered" >    definition.name = newName;</span>
+<span class="fstat-no" title="function not covered" >    function renameForInternalModules() {</span>
+<span class="cstat-no" title="statement not covered" >        var internalModuleFiles = globalDef.files.filter(<span class="fstat-no" title="function not covered" >function (f) {</span> <span class="cstat-no" title="statement not covered" >return f.imports.length === 0 &amp;&amp; f.getExports().length === 0 &amp;&amp; mainFile.defaultExportExpression == null; </span>});</span>
+<span class="cstat-no" title="statement not covered" >        var renameInfos = [renameInfo];</span>
+<span class="cstat-no" title="statement not covered" >        internalModuleFiles.forEach(<span class="fstat-no" title="function not covered" >function (file) {</span></span>
+<span class="cstat-no" title="statement not covered" >            renameInfos.push.apply(renameInfos, getRenameInfosFromVariablesInModule_1.getRenameInfosFromVariablesInModule({</span>
+                moduleDef: file,
+                currentRenameInfos: renameInfos
+            }));
+        });
+<span class="cstat-no" title="statement not covered" >        internalModuleFiles.forEach(<span class="fstat-no" title="function not covered" >function (file) {</span></span>
+<span class="cstat-no" title="statement not covered" >            renameInFile_1.renameInFile(renameInfos, file);</span>
+        });
+    }
+<span class="fstat-no" title="function not covered" >    function renameForExternalModules() {</span>
+<span class="cstat-no" title="statement not covered" >        var fileLocalRenameInfos = getRenameInfosFromVariablesInModule_1.getRenameInfosFromVariablesInModule({</span>
+            moduleDef: mainFile,
+            currentRenameInfos: [renameInfo]
+        });
+<span class="cstat-no" title="statement not covered" >        var exportedRenameInfos = getRenameInfosFromDefaultExport_1.getRenameInfosFromDefaultExport({</span>
+            currentRenameInfos: [renameInfo].concat(fileLocalRenameInfos),
+            file: mainFile
+        });
+<span class="cstat-no" title="statement not covered" >        if (namespaces.length &gt; 0 &amp;&amp; namespaces[0].isNamedExportOfFile || definition.isNamedExportOfFile) {</span>
+<span class="cstat-no" title="statement not covered" >            exportedRenameInfos.push(renameInfo);</span>
+        }
+<span class="cstat-no" title="statement not covered" >        renameInFile_1.renameInFile([renameInfo], mainFile);</span>
+<span class="cstat-no" title="statement not covered" >        renameInGlobalForExternalModules_1.renameInGlobalForExternalModules({</span>
+            exportedRenameInfos: exportedRenameInfos,
+            exportedFile: mainFile,
+            globalDef: globalDef
+        });
+    }
+}
+exports.renameDefinitionAs = renameDefinitionAs;
+&nbsp;
+//# sourceMappingURL=renameDefinitionAs.js.map
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Dec 09 2016 23:00:42 GMT-0500 (Eastern Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

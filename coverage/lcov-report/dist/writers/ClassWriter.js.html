@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for dist\writers\ClassWriter.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">dist/writers/</a> ClassWriter.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">62.5% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>65/104</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">15% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>6/40</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>12/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">64.36% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>65/101</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+var definitions = require("./../definitions");
+var WriteFlags_1 = require("./../WriteFlags");
+// todo: tests
+var ClassWriter = (function () {
+    function ClassWriter(writer, baseDefinitionWriter, documentationedWriter, decoratorsWriter, exportableWriter, ambientableWriter, typeParametersWriter, propertyWriter, methodWriter, classConstructorWriter, extendsImplementsWriter, functionBodyWriter) {
+        this.writer = writer;
+        this.baseDefinitionWriter = baseDefinitionWriter;
+        this.documentationedWriter = documentationedWriter;
+        this.decoratorsWriter = decoratorsWriter;
+        this.exportableWriter = exportableWriter;
+        this.ambientableWriter = ambientableWriter;
+        this.typeParametersWriter = typeParametersWriter;
+        this.propertyWriter = propertyWriter;
+        this.methodWriter = methodWriter;
+        this.classConstructorWriter = classConstructorWriter;
+        this.extendsImplementsWriter = extendsImplementsWriter;
+        this.functionBodyWriter = functionBodyWriter;
+    }
+    ClassWriter.prototype.write = function (def, flags) {
+        var _this = this;
+        this.baseDefinitionWriter.writeWrap(def, function () {
+            _this.writeHeader(def, flags);
+            _this.writer.block(function () {
+                _this.writeStaticProperties(def, flags);
+                _this.writer.newLine();
+                _this.writeStaticMethods(def, flags);
+                _this.writer.newLine();
+                _this.writeProperties(def, flags);
+                _this.writer.newLine();
+                _this.writeConstructor(def.constructorDef, flags);
+                _this.writer.newLine();
+                _this.writeMethods(def, flags);
+            });
+        });
+    };
+    ClassWriter.prototype.writeHeader = function (def, flags) {
+        this.documentationedWriter.write(def);
+        this.decoratorsWriter.write(def, flags);
+        this.exportableWriter.writeExportKeyword(def, flags);
+        this.ambientableWriter.writeDeclareKeyword(def);
+        this.writeAbstract(def);
+        this.writer.write("class ").write(def.name);
+        this.typeParametersWriter.write(def.typeParameters);
+        this.extendsImplementsWriter.writeExtends(def);
+        this.extendsImplementsWriter.writeImplements(def);
+    };
+    ClassWriter.prototype.writeAbstract = function (def) {
+        if (def.isAbstract)
+            this.writer.write("abstract ");
+    };
+    ClassWriter.prototype.writeConstructor = function (constructorDef, flags) {
+        var _this = this;
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (constructorDef == null || <span class="branch-1 cbranch-no" title="branch not covered" >!this.classConstructorWriter.shouldWriteConstructor(constructorDef, flags))</span>
+            return;
+<span class="cstat-no" title="statement not covered" >        var willWriteFunctionBody = this.functionBodyWriter.willWriteFunctionBody(constructorDef, flags);</span>
+<span class="cstat-no" title="statement not covered" >        if (!willWriteFunctionBody)</span>
+<span class="cstat-no" title="statement not covered" >            flags |= WriteFlags_1.WriteFlags.HideScopeOnParameters;</span>
+<span class="cstat-no" title="statement not covered" >        this.classConstructorWriter.write(constructorDef, flags);</span>
+<span class="cstat-no" title="statement not covered" >        this.writer.newLine();</span>
+        // if the function body won't be written, the scoped constructor parameters need to be written out as properties
+<span class="cstat-no" title="statement not covered" >        if (!willWriteFunctionBody) {</span>
+<span class="cstat-no" title="statement not covered" >            (constructorDef.parameters || []).filter(<span class="fstat-no" title="function not covered" >function (p) {</span> <span class="cstat-no" title="statement not covered" >return p.scope !== definitions.ClassConstructorParameterScope.None; </span>}).forEach(<span class="fstat-no" title="function not covered" >function (p) {</span></span>
+<span class="cstat-no" title="statement not covered" >                _this.propertyWriter.write(p.toClassProperty(), flags);</span>
+            });
+        }
+    };
+    ClassWriter.prototype.writeStaticProperties = function (def, flags) {
+        var _this = this;
+        def.staticProperties.forEach(<span class="fstat-no" title="function not covered" >function (p) {</span>
+<span class="cstat-no" title="statement not covered" >            if (!_this.shouldInclude(p, flags))</span>
+<span class="cstat-no" title="statement not covered" >                return;</span>
+<span class="cstat-no" title="statement not covered" >            _this.propertyWriter.write(p, flags);</span>
+<span class="cstat-no" title="statement not covered" >            _this.writer.newLine();</span>
+        });
+    };
+    ClassWriter.prototype.writeProperties = function (def, flags) {
+        var _this = this;
+        def.properties.forEach(<span class="fstat-no" title="function not covered" >function (p) {</span>
+<span class="cstat-no" title="statement not covered" >            if (!_this.shouldInclude(p, flags) || p.isConstructorParameter)</span>
+<span class="cstat-no" title="statement not covered" >                return;</span>
+<span class="cstat-no" title="statement not covered" >            var willWriteAccessorBody = _this.propertyWriter.willWriteAccessorBody(p);</span>
+<span class="cstat-no" title="statement not covered" >            if (willWriteAccessorBody)</span>
+<span class="cstat-no" title="statement not covered" >                _this.writer.newLine();</span>
+<span class="cstat-no" title="statement not covered" >            _this.propertyWriter.write(p, flags);</span>
+<span class="cstat-no" title="statement not covered" >            _this.writer.newLine();</span>
+<span class="cstat-no" title="statement not covered" >            if (willWriteAccessorBody)</span>
+<span class="cstat-no" title="statement not covered" >                _this.writer.newLine();</span>
+        });
+    };
+    ClassWriter.prototype.writeStaticMethods = function (def, flags) {
+        var _this = this;
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (def.isAmbient)
+<span class="cstat-no" title="statement not covered" >            flags = flags | WriteFlags_1.WriteFlags.HideFunctionBodies;</span>
+        def.staticMethods.forEach(<span class="fstat-no" title="function not covered" >function (m) {</span> <span class="cstat-no" title="statement not covered" >return _this.writeMethod(m, flags); </span>});
+    };
+    ClassWriter.prototype.writeMethods = function (def, flags) {
+        var _this = this;
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (def.isAmbient)
+<span class="cstat-no" title="statement not covered" >            flags = flags | WriteFlags_1.WriteFlags.HideFunctionBodies;</span>
+        def.methods.forEach(<span class="fstat-no" title="function not covered" >function (m) {</span> <span class="cstat-no" title="statement not covered" >return _this.writeMethod(m, flags); </span>});
+    };
+    ClassWriter.prototype.writeMethod = <span class="fstat-no" title="function not covered" >function (def, flags) {</span>
+<span class="cstat-no" title="statement not covered" >        if (!this.shouldInclude(def, flags))</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+<span class="cstat-no" title="statement not covered" >        var thisHasBlankLine = this.functionBodyWriter.willWriteFunctionBody(def, flags);</span>
+<span class="cstat-no" title="statement not covered" >        if (thisHasBlankLine)</span>
+<span class="cstat-no" title="statement not covered" >            this.writer.newLine();</span>
+<span class="cstat-no" title="statement not covered" >        this.methodWriter.write(def, flags);</span>
+<span class="cstat-no" title="statement not covered" >        if (thisHasBlankLine)</span>
+<span class="cstat-no" title="statement not covered" >            this.writer.newLine();</span>
+    };
+    ClassWriter.prototype.shouldInclude = <span class="fstat-no" title="function not covered" >function (def, flags) {</span>
+<span class="cstat-no" title="statement not covered" >        if (def.scope === definitions.Scope.Private &amp;&amp; (flags &amp; WriteFlags_1.WriteFlags.HidePrivateMembers))</span>
+<span class="cstat-no" title="statement not covered" >            return false;</span>
+        else <span class="cstat-no" title="statement not covered" >if (def.scope === definitions.Scope.Protected &amp;&amp; (flags &amp; WriteFlags_1.WriteFlags.HideProtectedMembers))</span>
+<span class="cstat-no" title="statement not covered" >            return false;</span>
+        else
+<span class="cstat-no" title="statement not covered" >            return true;</span>
+    };
+    return ClassWriter;
+}());
+exports.ClassWriter = ClassWriter;
+&nbsp;
+//# sourceMappingURL=ClassWriter.js.map
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Dec 17 2016 16:49:10 GMT-0500 (Eastern Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

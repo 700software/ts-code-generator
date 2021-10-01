@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for dist\factories\StructureFactory.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">dist/factories/</a> StructureFactory.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.73% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>86/88</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">75% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>9/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.44% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>38/39</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.73% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>86/88</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">739×</span>
+<span class="cline-any cline-yes">739×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">27×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">39×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">26×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">32×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">23×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">20×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">299×</span>
+<span class="cline-any cline-yes">299×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">20×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+var binders = require("./../binders");
+var definitions = require("./../definitions");
+function bindToDefinition(binder, def) {
+    binder.bind(def);
+    return def;
+}
+var StructureFactory = (function () {
+    /* istanbul ignore next */ function StructureFactory() {
+    }
+    StructureFactory.prototype.getCallSignature = function (structure) {
+        return bindToDefinition(new binders.StructureCallSignatureBinder(this, structure), new definitions.CallSignatureDefinition());
+    };
+    StructureFactory.prototype.getCallSignatureParameter = function (structure) {
+        return bindToDefinition(new binders.StructureCallSignatureParameterBinder(this, structure), new definitions.CallSignatureParameterDefinition());
+    };
+    StructureFactory.prototype.getClass = function (structure) {
+        return bindToDefinition(new binders.StructureClassBinder(this, structure), new definitions.ClassDefinition());
+    };
+    StructureFactory.prototype.getClassConstructor = function (structure) {
+        return bindToDefinition(new binders.StructureClassConstructorBinder(this, structure), new definitions.ClassConstructorDefinition());
+    };
+    StructureFactory.prototype.getClassConstructorParameter = function (structure) {
+        return bindToDefinition(new binders.StructureClassConstructorParameterBinder(this, structure), new definitions.ClassConstructorParameterDefinition());
+    };
+    StructureFactory.prototype.getClassMethod = function (structure) {
+        return bindToDefinition(new binders.StructureClassMethodBinder(this, structure), new definitions.ClassMethodDefinition());
+    };
+    StructureFactory.prototype.getClassMethodParameter = function (structure) {
+        return bindToDefinition(new binders.StructureClassMethodParameterBinder(this, structure), new definitions.ClassMethodParameterDefinition());
+    };
+    StructureFactory.prototype.getClassProperty = function (structure) {
+        return bindToDefinition(new binders.StructureClassPropertyBinder(this, structure), new definitions.ClassPropertyDefinition());
+    };
+    StructureFactory.prototype.getClassStaticMethod = function (structure) {
+        return bindToDefinition(new binders.StructureClassStaticMethodBinder(this, structure), new definitions.ClassStaticMethodDefinition());
+    };
+    StructureFactory.prototype.getClassStaticMethodParameter = function (structure) {
+        return bindToDefinition(new binders.StructureClassStaticMethodParameterBinder(this, structure), new definitions.ClassStaticMethodParameterDefinition());
+    };
+    StructureFactory.prototype.getClassStaticProperty = function (structure) {
+        return bindToDefinition(new binders.StructureClassStaticPropertyBinder(this, structure), new definitions.ClassStaticPropertyDefinition());
+    };
+    StructureFactory.prototype.getDecorator = function (structure) {
+        return bindToDefinition(new binders.StructureDecoratorBinder(this, structure), new definitions.DecoratorDefinition());
+    };
+    StructureFactory.prototype.getEnum = function (structure) {
+        return bindToDefinition(new binders.StructureEnumBinder(this, structure), new definitions.EnumDefinition());
+    };
+    StructureFactory.prototype.getEnumMember = function (structure) {
+        return bindToDefinition(new binders.StructureEnumMemberBinder(structure), new definitions.EnumMemberDefinition());
+    };
+    StructureFactory.prototype.getExpressionFromText = function (text) {
+        if (typeof text === "string" &amp;&amp; text.length &gt; 0) {
+            return bindToDefinition(new binders.StructureExpressionBinder(text), new definitions.ExpressionDefinition());
+        }
+        else {
+            return null;
+        }
+    };
+    StructureFactory.prototype.getFile = function (structure) {
+        return bindToDefinition(new binders.StructureFileBinder(this, structure), new definitions.FileDefinition());
+    };
+    StructureFactory.prototype.getFunction = function (structure) {
+        return bindToDefinition(new binders.StructureFunctionBinder(this, structure), new definitions.FunctionDefinition());
+    };
+    StructureFactory.prototype.getFunctionParameter = function (structure) {
+        return bindToDefinition(new binders.StructureFunctionParameterBinder(this, structure), new definitions.FunctionParameterDefinition());
+    };
+    StructureFactory.prototype.getImport = function (structure) {
+        return bindToDefinition(new binders.StructureImportBinder(this, structure), new definitions.ImportDefinition());
+    };
+    StructureFactory.prototype.getDefaultImportPartByName = function (importName) {
+        return bindToDefinition(new binders.StructureDefaultImportPartBinder(importName), new definitions.DefaultImportPartDefinition());
+    };
+    StructureFactory.prototype.getIndexSignature = function (structure) {
+        return bindToDefinition(new binders.StructureIndexSignatureBinder(this, structure), new definitions.IndexSignatureDefinition());
+    };
+    StructureFactory.prototype.getReExport = function (structure) {
+        return bindToDefinition(new binders.StructureReExportBinder(this, structure), new definitions.ReExportDefinition());
+    };
+    StructureFactory.prototype.getNamedImportPart = function (structure) {
+        return bindToDefinition(new binders.StructureNamedImportPartBinder(structure), new definitions.NamedImportPartDefinition());
+    };
+    StructureFactory.prototype.getInterface = function (structure) {
+        return bindToDefinition(new binders.StructureInterfaceBinder(this, structure), new definitions.InterfaceDefinition());
+    };
+    StructureFactory.prototype.getInterfaceMethod = function (structure) {
+        return bindToDefinition(new binders.StructureInterfaceMethodBinder(this, structure), new definitions.InterfaceMethodDefinition());
+    };
+    StructureFactory.prototype.getInterfaceProperty = function (structure) {
+        return bindToDefinition(new binders.StructureInterfacePropertyBinder(this, structure), new definitions.InterfacePropertyDefinition());
+    };
+    StructureFactory.prototype.getInterfaceMethodParameter = function (structure) {
+        return bindToDefinition(new binders.StructureInterfaceMethodParameterBinder(this, structure), new definitions.InterfaceMethodParameterDefinition());
+    };
+    StructureFactory.prototype.getNamespace = function (structure) {
+        return bindToDefinition(new binders.StructureNamespaceBinder(this, structure), new definitions.NamespaceDefinition());
+    };
+    StructureFactory.prototype.getObjectProperty = function (structure) {
+        return bindToDefinition(new binders.StructureObjectPropertyBinder(this, structure), new definitions.ObjectPropertyDefinition());
+    };
+    StructureFactory.prototype.getTypeAlias = function (structure) {
+        return bindToDefinition(new binders.StructureTypeAliasBinder(this, structure), new definitions.TypeAliasDefinition());
+    };
+    StructureFactory.prototype.getTypeFromDefinitionAndTypeArguments = function (definition, typeArguments) {
+        var text = definition.name || "any";
+        if (typeArguments.length &gt; 0) {
+            text += "&lt;" + typeArguments.join(", ") + "&gt;";
+        }
+        return this.getTypeFromText(text);
+    };
+    StructureFactory.prototype.getTypeFromText = function (text) {
+        text = text || <span class="branch-1 cbranch-no" title="branch not covered" >"any";</span>
+        return bindToDefinition(new binders.StructureTypeBinder(this, text), new definitions.TypeDefinition());
+    };
+    StructureFactory.prototype.getTypeNodeFromText = <span class="fstat-no" title="function not covered" >function (text) {</span>
+<span class="cstat-no" title="statement not covered" >        text = text || "any";</span>
+<span class="cstat-no" title="statement not covered" >        return bindToDefinition(new binders.StructureTypeNodeBinder(this, text), new definitions.TypeNodeDefinition());</span>
+    };
+    StructureFactory.prototype.getTypeParameter = function (structure) {
+        return bindToDefinition(new binders.StructureTypeParameterBinder(this, structure), new definitions.TypeParameterDefinition());
+    };
+    StructureFactory.prototype.getUserDefinedTypeGuard = function (structure) {
+        return bindToDefinition(new binders.StructureUserDefinedTypeGuardBinder(this, structure), new definitions.UserDefinedTypeGuardDefinition());
+    };
+    StructureFactory.prototype.getVariable = function (structure) {
+        return bindToDefinition(new binders.StructureVariableBinder(this, structure), new definitions.VariableDefinition());
+    };
+    return StructureFactory;
+}());
+exports.StructureFactory = StructureFactory;
+&nbsp;
+//# sourceMappingURL=StructureFactory.js.map
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Dec 17 2016 16:49:10 GMT-0500 (Eastern Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

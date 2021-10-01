@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for dist\writers\ModuledWriter.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">dist/writers/</a> ModuledWriter.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">92.73% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>51/55</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">86.49% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>32/37</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>7/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">92.73% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>51/55</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">30×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">28×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">28×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+var definitions = require("./../definitions");
+var utils_1 = require("./../utils");
+var WriteFlags_1 = require("./../WriteFlags");
+// todo: tests
+var ModuledWriter = (function () {
+    function ModuledWriter(writer, interfaceWriter, classWriter, enumWriter, functionWriter, variableWriter, typeAliasWriter) {
+        this.writer = writer;
+        this.interfaceWriter = interfaceWriter;
+        this.classWriter = classWriter;
+        this.enumWriter = enumWriter;
+        this.functionWriter = functionWriter;
+        this.variableWriter = variableWriter;
+        this.typeAliasWriter = typeAliasWriter;
+    }
+    ModuledWriter.prototype.initialize = function (namespaceWriter) {
+        // this was the only way I could think of to handle the circular dependency caused by the
+        // circular nature of the problem... maybe there's a better way
+        this.namespaceWriter = namespaceWriter;
+    };
+    ModuledWriter.prototype.write = function (def, flags) {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (def instanceof definitions.FileDefinition &amp;&amp; utils_1.DefinitionUtils.isDefinitionFile(def) || def instanceof definitions.NamespaceDefinition &amp;&amp; def.isAmbient) {
+<span class="cstat-no" title="statement not covered" >            flags = flags | WriteFlags_1.WriteFlags.IsInAmbientContext;</span>
+        }
+        else {
+            flags = flags &amp; ~WriteFlags_1.WriteFlags.IsInAmbientContext;
+        }
+        this.writeChildren(def, flags);
+    };
+    ModuledWriter.prototype.writeChildren = function (def, flags) {
+        var _this = this;
+        // order these by what should be written if order is null
+        var allDefinitions = def.typeAliases.concat(def.interfaces, def.enums, def.classes, def.namespaces, def.variables, def.functions);
+        allDefinitions.sort(function (a, b) {
+            <span class="missing-if-branch" title="if path not taken" >I</span>if (b.order == null) {
+<span class="cstat-no" title="statement not covered" >                return -1;</span>
+            }
+            else <span class="missing-if-branch" title="if path not taken" >I</span>if (a.order == null) {
+<span class="cstat-no" title="statement not covered" >                return 1;</span>
+            }
+            else {
+                return a.order - b.order;
+            }
+        });
+        allDefinitions.forEach(function (d, i) {
+            if (i &gt; 0 &amp;&amp; !(d instanceof definitions.TypeAliasDefinition) &amp;&amp; !(d instanceof definitions.VariableDefinition)) {
+                _this.writer.newLine();
+            }
+            if (d instanceof definitions.ClassDefinition) {
+                _this.classWriter.write(d, flags);
+            }
+            else if (d instanceof definitions.InterfaceDefinition) {
+                _this.interfaceWriter.write(d, flags);
+            }
+            else if (d instanceof definitions.FunctionDefinition) {
+                _this.functionWriter.write(d, flags);
+                _this.writer.newLineIfLastNotNewLine();
+            }
+            else if (d instanceof definitions.NamespaceDefinition) {
+                _this.namespaceWriter.write(d, flags);
+            }
+            else if (d instanceof definitions.VariableDefinition) {
+                if (i &gt; 0 &amp;&amp; !(allDefinitions[i - 1] instanceof definitions.VariableDefinition)) {
+                    _this.writer.newLine();
+                }
+                _this.variableWriter.write(d, flags);
+                _this.writer.newLine();
+            }
+            else if (d instanceof definitions.EnumDefinition) {
+                _this.enumWriter.write(d, flags);
+                _this.writer.newLine();
+            }
+            else <span class="missing-if-branch" title="else path not taken" >E</span>if (d instanceof definitions.TypeAliasDefinition) {
+                <span class="missing-if-branch" title="if path not taken" >I</span>if (i &gt; 0 &amp;&amp; !(allDefinitions[i - 1] instanceof definitions.TypeAliasDefinition)) {
+<span class="cstat-no" title="statement not covered" >                    _this.writer.newLine();</span>
+                }
+                _this.typeAliasWriter.write(d, flags);
+                _this.writer.newLine();
+            }
+        });
+    };
+    return ModuledWriter;
+}());
+exports.ModuledWriter = ModuledWriter;
+&nbsp;
+//# sourceMappingURL=ModuledWriter.js.map
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Dec 17 2016 16:49:10 GMT-0500 (Eastern Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

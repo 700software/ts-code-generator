@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for dist\utils\renameDefinitionAs\RenameInfo.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">dist/utils/renameDefinitionAs/</a> RenameInfo.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">45.95% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>17/37</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">6.25% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">45.95% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>17/37</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+var RenameInfo = (function () {
+<span class="fstat-no" title="function not covered" >    function RenameInfo(opts) {</span>
+<span class="cstat-no" title="statement not covered" >        this.fullNameFrom = opts.fullNameFrom;</span>
+<span class="cstat-no" title="statement not covered" >        this.fullNameTo = opts.fullNameTo;</span>
+    }
+    RenameInfo.createFromNamespaces = <span class="fstat-no" title="function not covered" >function (opts) {</span>
+<span class="cstat-no" title="statement not covered" >        var namespacePrefix = opts.namespaceNames.length &gt; 0 ? opts.namespaceNames.join(".") + "." : "";</span>
+<span class="cstat-no" title="statement not covered" >        return new RenameInfo({</span>
+            fullNameFrom: namespacePrefix + opts.nameFrom,
+            fullNameTo: namespacePrefix + opts.nameTo
+        });
+    };
+    RenameInfo.prototype.hasNamespaces = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        return this.fullNameFrom.indexOf(".") !== -1;</span>
+    };
+    RenameInfo.prototype.getNumberOfNamespaces = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        return (this.fullNameFrom.match(/\./g) || []).length;</span>
+    };
+    RenameInfo.prototype.isRootDefaultExportOfFile = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        return this.getRootNameFrom() === "default";</span>
+    };
+    RenameInfo.prototype.getRootNameFrom = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        return this.fullNameFrom.split(".")[0];</span>
+    };
+    RenameInfo.prototype.getRootNameTo = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        return this.fullNameTo.split(".")[0];</span>
+    };
+    RenameInfo.prototype.getFirstXNamespacesFromFullName = <span class="fstat-no" title="function not covered" >function (numberNamespaces) {</span>
+<span class="cstat-no" title="statement not covered" >        return this.getFullNameParts().slice(0, numberNamespaces).join(".");</span>
+    };
+    RenameInfo.prototype.getFullNameParts = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        return this.fullNameFrom.split(".");</span>
+    };
+    RenameInfo.prototype.getFullReplaceParts = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        return this.fullNameTo.split(".");</span>
+    };
+    RenameInfo.prototype.createCopy = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        return new RenameInfo({</span>
+            fullNameFrom: this.fullNameFrom,
+            fullNameTo: this.fullNameTo
+        });
+    };
+    RenameInfo.prototype.createWithoutFirstXNamespaces = <span class="fstat-no" title="function not covered" >function (numNamespaces) {</span>
+<span class="cstat-no" title="statement not covered" >        return new RenameInfo({</span>
+            fullNameFrom: this.fullNameFrom.split(".").slice(numNamespaces).join("."),
+            fullNameTo: this.fullNameTo.split(".").slice(numNamespaces).join(".")
+        });
+    };
+    RenameInfo.prototype.createWithPrependedNamespace = <span class="fstat-no" title="function not covered" >function (namespaceName) {</span>
+<span class="cstat-no" title="statement not covered" >        return new RenameInfo({</span>
+            fullNameFrom: namespaceName + "." + this.fullNameFrom,
+            fullNameTo: namespaceName + "." + this.fullNameTo
+        });
+    };
+    RenameInfo.prototype.createWithNewFirstNamespace = <span class="fstat-no" title="function not covered" >function (namespaceName) {</span>
+<span class="cstat-no" title="statement not covered" >        var replace = <span class="fstat-no" title="function not covered" >function (name) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var parts = name.split(".");</span>
+<span class="cstat-no" title="statement not covered" >            parts[0] = namespaceName;</span>
+<span class="cstat-no" title="statement not covered" >            return parts.join(".");</span>
+        };
+<span class="cstat-no" title="statement not covered" >        return new RenameInfo({</span>
+            fullNameFrom: replace(this.fullNameFrom),
+            fullNameTo: replace(this.fullNameTo)
+        });
+    };
+    return RenameInfo;
+}());
+exports.RenameInfo = RenameInfo;
+&nbsp;
+//# sourceMappingURL=RenameInfo.js.map
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Dec 09 2016 23:00:42 GMT-0500 (Eastern Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

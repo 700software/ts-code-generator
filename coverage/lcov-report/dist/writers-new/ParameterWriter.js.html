@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for dist\writers-new\ParameterWriter.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">dist/writers-new/</a> ParameterWriter.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>32/32</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>16/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>7/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>32/32</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">84×</span>
+<span class="cline-any cline-yes">84×</span>
+<span class="cline-any cline-yes">84×</span>
+<span class="cline-any cline-yes">84×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+var definitions_1 = require("./../definitions");
+var WriteFlags_1 = require("./../WriteFlags");
+var ParameterWriter = (function () {
+    function ParameterWriter(writer, baseWriter, typeWithDefaultExpressionWriter, classConstructorParameterScopeWriter) {
+        this.writer = writer;
+        this.baseWriter = baseWriter;
+        this.typeWithDefaultExpressionWriter = typeWithDefaultExpressionWriter;
+        this.classConstructorParameterScopeWriter = classConstructorParameterScopeWriter;
+    }
+    ParameterWriter.prototype.write = function (param, flags) {
+        var _this = this;
+        this.baseWriter.writeWrap(param, function () {
+            if (param instanceof definitions_1.ClassConstructorParameterDefinition) {
+                if ((flags &amp; WriteFlags_1.WriteFlags.HideScopeOnParameters) === 0) {
+                    _this.classConstructorParameterScopeWriter.writeScope(param.scope);
+                    _this.writer.write(" ");
+                }
+                _this.writer.conditionalWrite(param.isReadonly, "readonly ");
+            }
+            _this.writeRestParameter(param);
+            _this.writer.write(param.name);
+            _this.writeIsOptional(param, flags);
+            _this.typeWithDefaultExpressionWriter.write(param, flags, _this.getFallbackTypeText(param));
+        });
+    };
+    ParameterWriter.prototype.writeRestParameter = function (param) {
+        if (param.isRestParameter)
+            this.writer.write("...");
+    };
+    ParameterWriter.prototype.getFallbackTypeText = function (param) {
+        return param.isRestParameter ? "any[]" : "any";
+    };
+    ParameterWriter.prototype.writeIsOptional = function (param, flags) {
+        var isOptionalNotRest = param.isOptional &amp;&amp; !param.isRestParameter;
+        var willWriteDefaultExpression = param.defaultExpression != null &amp;&amp; (flags &amp; WriteFlags_1.WriteFlags.HideExpressions) !== WriteFlags_1.WriteFlags.HideExpressions;
+        if (isOptionalNotRest &amp;&amp; !willWriteDefaultExpression)
+            this.writer.write("?");
+    };
+    return ParameterWriter;
+}());
+exports.ParameterWriter = ParameterWriter;
+&nbsp;
+//# sourceMappingURL=ParameterWriter.js.map
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Nov 27 2016 17:34:24 GMT-0500 (Eastern Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

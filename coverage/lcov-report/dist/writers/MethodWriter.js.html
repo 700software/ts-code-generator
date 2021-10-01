@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for dist\writers\MethodWriter.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">dist/writers/</a> MethodWriter.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">57.41% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>31/54</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">46.67% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>7/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">40% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">54.9% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>28/51</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">2 statements, 3 branches</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+var __extends = (this &amp;&amp; this.__extends)/* istanbul ignore next */ || function (d, b) {
+    for (var p in b) <span class="cstat-skip" title="statement not covered" >if (b.hasOwnProperty(p)) <span class="cstat-skip" title="statement not covered" >d[p] = b[p];</span></span>
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? <span class="branch-0 cbranch-skip" title="branch not covered" >Object.create(b) </span>: (__.prototype = b.prototype, new __());
+};
+var definitions_1 = require("./../definitions");
+var WriteFlags_1 = require("./../WriteFlags");
+var factories_1 = require("./../factories");
+var ScopeWriter_1 = require("./ScopeWriter");
+var BaseDefinitionWriter_1 = require("./BaseDefinitionWriter");
+var FunctionBodyWriter_1 = require("./FunctionBodyWriter");
+var FunctionReturnTypeWriter_1 = require("./FunctionReturnTypeWriter");
+var MethodWriter = (function (_super) {
+    __extends(MethodWriter, _super);
+    function MethodWriter() {
+        _super.apply(this, arguments);
+        this.callSignatureWriter = factories_1.MainFactory.createWriteFactory(this.writer).getCallSignatureWriter();
+        this.typeParametersWriter = factories_1.MainFactory.createWriteFactory(this.writer).getTypeParametersWriter();
+        this.parametersWriter = factories_1.MainFactory.createWriteFactory(this.writer).getParametersWriter();
+        this.scopeWriter = new ScopeWriter_1.ScopeWriter(this.writer);
+        this.functionBodyWriter = new FunctionBodyWriter_1.FunctionBodyWriter(this.writer);
+        this.functionReturnTypeWriter = new FunctionReturnTypeWriter_1.FunctionReturnTypeWriter(this.writer);
+    }
+    MethodWriter.prototype.writeDefault = <span class="fstat-no" title="function not covered" >function (def, flags) {</span>
+<span class="cstat-no" title="statement not covered" >        var _this = this;</span>
+<span class="cstat-no" title="statement not covered" >        var showImplementation = def.overloadSignatures.length === 0 || (flags &amp; WriteFlags_1.WriteFlags.HideFunctionImplementations) === 0;</span>
+<span class="cstat-no" title="statement not covered" >        def.overloadSignatures.forEach(<span class="fstat-no" title="function not covered" >function (s) {</span></span>
+<span class="cstat-no" title="statement not covered" >            _this.writeStartOfFunctionHeader(def);</span>
+<span class="cstat-no" title="statement not covered" >            _this.callSignatureWriter.write(s, flags);</span>
+        });
+<span class="cstat-no" title="statement not covered" >        if (showImplementation)</span>
+<span class="cstat-no" title="statement not covered" >            this.writeImplementation(def, flags);</span>
+    };
+    MethodWriter.prototype.writeImplementation = <span class="fstat-no" title="function not covered" >function (def, flags) {</span>
+<span class="cstat-no" title="statement not covered" >        this.writeStartOfFunctionHeader(def);</span>
+<span class="cstat-no" title="statement not covered" >        this.typeParametersWriter.write(def.typeParameters);</span>
+<span class="cstat-no" title="statement not covered" >        this.parametersWriter.write(def, flags);</span>
+<span class="cstat-no" title="statement not covered" >        this.functionReturnTypeWriter.write(def, flags);</span>
+<span class="cstat-no" title="statement not covered" >        this.functionBodyWriter.write(def, flags);</span>
+    };
+    MethodWriter.prototype.writeStartOfFunctionHeader = <span class="fstat-no" title="function not covered" >function (def) {</span>
+<span class="cstat-no" title="statement not covered" >        this.scopeWriter.write(def.scope);</span>
+<span class="cstat-no" title="statement not covered" >        this.writer.spaceIfLastNotSpace();</span>
+<span class="cstat-no" title="statement not covered" >        this.writeStatic(def);</span>
+<span class="cstat-no" title="statement not covered" >        this.writeAbstract(def);</span>
+<span class="cstat-no" title="statement not covered" >        this.writeAsyncKeyword(def);</span>
+<span class="cstat-no" title="statement not covered" >        this.writer.conditionalWrite(def.isGenerator, "*");</span>
+<span class="cstat-no" title="statement not covered" >        this.writer.write(def.name);</span>
+    };
+    MethodWriter.prototype.writeStatic = <span class="fstat-no" title="function not covered" >function (def) {</span>
+<span class="cstat-no" title="statement not covered" >        if (def instanceof definitions_1.ClassStaticMethodDefinition) {</span>
+<span class="cstat-no" title="statement not covered" >            this.writer.write("static ");</span>
+        }
+    };
+    MethodWriter.prototype.writeAbstract = <span class="fstat-no" title="function not covered" >function (def) {</span>
+<span class="cstat-no" title="statement not covered" >        if (def.isAbstract) {</span>
+<span class="cstat-no" title="statement not covered" >            this.writer.write("abstract ");</span>
+        }
+    };
+    return MethodWriter;
+}(BaseDefinitionWriter_1.BaseDefinitionWriter));
+exports.MethodWriter = MethodWriter;
+&nbsp;
+//# sourceMappingURL=MethodWriter.js.map
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Nov 27 2016 17:34:24 GMT-0500 (Eastern Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

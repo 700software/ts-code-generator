@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for dist\utils\renameDefinitionAs\indexOfAllDefinitionsInText.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">dist/utils/renameDefinitionAs/</a> indexOfAllDefinitionsInText.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>62/62</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>46/46</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>14/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>60/60</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-yes">527×</span>
+<span class="cline-any cline-yes">42×</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-yes">749×</span>
+<span class="cline-any cline-yes">749×</span>
+<span class="cline-any cline-yes">298×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">451×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">749×</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-yes">20×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">64×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">749×</span>
+<span class="cline-any cline-yes">28×</span>
+<span class="cline-any cline-yes">28×</span>
+<span class="cline-any cline-yes">28×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">749×</span>
+<span class="cline-any cline-yes">749×</span>
+<span class="cline-any cline-yes">749×</span>
+<span class="cline-any cline-yes">749×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">745×</span>
+<span class="cline-any cline-yes">503×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">242×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">240×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">238×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">749×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">777×</span>
+<span class="cline-any cline-yes">262×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">515×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">831×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1304×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use strict";
+function indexOfAllDefinitionsInText(text, searchingText) {
+    return new DefinitionInTextFinder(text).indexOfAll(searchingText);
+}
+exports.indexOfAllDefinitionsInText = indexOfAllDefinitionsInText;
+var DefinitionInTextFinder = (function () {
+    function DefinitionInTextFinder(text) {
+        this.text = text;
+        this.stringCharStack = [];
+        this.currentIndex = 0;
+        this.validVarNameChars = /[A-Za-z0-9_]/;
+    }
+    DefinitionInTextFinder.prototype.indexOfAll = function (searchingText) {
+        var _this = this;
+        var currentMatchIndex = 0;
+        var currentCharMatches = function () { return currentMatchIndex &lt; searchingText.length &amp;&amp; _this.getCurrentChar() === searchingText[currentMatchIndex]; };
+        var isValidFirstChar = function () { return !_this.isValidVariableNameChar(_this.getLastChar()) &amp;&amp; _this.getLastChar() !== "."; };
+        var foundIndexes = [];
+        for (this.currentIndex = 0; this.currentIndex &lt; this.text.length; this.currentIndex++) {
+            this.handleStringChar();
+            if (!this.isInString() &amp;&amp; currentCharMatches() &amp;&amp; (currentMatchIndex !== 0 || isValidFirstChar())) {
+                currentMatchIndex++;
+            }
+            else {
+                currentMatchIndex = 0;
+            }
+            if (currentMatchIndex === searchingText.length) {
+                if (!this.isValidVariableNameChar(this.getNextChar())) {
+                    foundIndexes.push((this.currentIndex + 1) - searchingText.length);
+                }
+                currentMatchIndex = 0;
+            }
+        }
+        return foundIndexes;
+    };
+    DefinitionInTextFinder.prototype.isValidVariableNameChar = function (char) {
+        return char != null &amp;&amp; this.validVarNameChars.test(char);
+    };
+    DefinitionInTextFinder.prototype.handleStringChar = function () {
+        if (this.isCurrentStringChar()) {
+            var lastStringChar = this.getLastStringCharOnStack();
+            var currentChar = this.getCurrentChar();
+            if (currentChar === lastStringChar) {
+                this.stringCharStack.pop();
+            }
+            else {
+                this.stringCharStack.push(currentChar === "{" ? "}" : currentChar);
+            }
+        }
+    };
+    DefinitionInTextFinder.prototype.isCurrentStringChar = function () {
+        var lastChar = this.getLastChar();
+        var currentChar = this.getCurrentChar();
+        var lastStringChar = this.getLastStringCharOnStack();
+        if (lastChar === "\\") {
+            return false;
+        }
+        else if (lastStringChar == null) {
+            return currentChar === "`" || currentChar === "'" || currentChar === "\"";
+        }
+        else if (lastStringChar === "`" &amp;&amp; lastChar === "$" &amp;&amp; currentChar === "{") {
+            return true;
+        }
+        else if (lastStringChar === "}" &amp;&amp; currentChar === "}") {
+            return true;
+        }
+        else {
+            return currentChar === lastStringChar;
+        }
+    };
+    DefinitionInTextFinder.prototype.isInString = function () {
+        return this.stringCharStack.length &gt; 0 &amp;&amp; this.stringCharStack[this.stringCharStack.length - 1] !== "}";
+    };
+    DefinitionInTextFinder.prototype.getLastStringCharOnStack = function () {
+        if (this.stringCharStack.length &gt; 0) {
+            return this.stringCharStack[this.stringCharStack.length - 1];
+        }
+        else {
+            return null;
+        }
+    };
+    DefinitionInTextFinder.prototype.getLastChar = function () {
+        return this.currentIndex - 1 &lt; 0 ? null : this.text[this.currentIndex - 1];
+    };
+    DefinitionInTextFinder.prototype.getCurrentChar = function () {
+        return this.text[this.currentIndex];
+    };
+    DefinitionInTextFinder.prototype.getNextChar = function () {
+        return this.currentIndex + 1 &gt;= this.text.length ? null : this.text[this.currentIndex + 1];
+    };
+    return DefinitionInTextFinder;
+}());
+&nbsp;
+//# sourceMappingURL=indexOfAllDefinitionsInText.js.map
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Dec 09 2016 23:00:42 GMT-0500 (Eastern Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
