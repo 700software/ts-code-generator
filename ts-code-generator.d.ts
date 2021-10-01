@@ -1148,8 +1148,8 @@ export abstract class DocumentationedBinder {
 }
 
 export abstract class ModuledBinder {
-    abstract getMembers(): definitions.NodeDefinitions[];
-    bind(def: ModuledDefinitions, handleCustomDefinition?: undefined | ((def: definitions.NodeDefinitions) => void)): void;
+    abstract getMembers(): NodeDefinitions[];
+    bind(def: ModuledDefinitions, handleCustomDefinition?: undefined | ((def: NodeDefinitions) => void)): void;
 }
 
 export abstract class NamedBinder {
